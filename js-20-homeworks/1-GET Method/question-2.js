@@ -7,7 +7,7 @@
 // ! Answer
 async function fetchUsers() {
     try{
-        const response = await fetch("https://jswonplaceholder.typicode.com/users")
+        const response = await fetch("https://jsonplaceholder.typicode.com/users")
         if (response == 404) {
             throw new Error(`status: ${response.status}`);
         }
@@ -16,5 +16,7 @@ async function fetchUsers() {
     }catch(er){
         console.log("error:",er.message);
     }
+    
 }
 fetchUsers()
+
